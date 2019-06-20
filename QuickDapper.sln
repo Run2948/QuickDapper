@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_docs", "_docs", "{AE00BF8B-5639-41F6-B3E6-B0EBC9CC0941}"
+	ProjectSection(SolutionItems) = preProject
+		docs\1319833657.png = docs\1319833657.png
+		docs\20190619211838.png = docs\20190619211838.png
+		docs\272022528694589.png = docs\272022528694589.png
+		docs\272022531258132.png = docs\272022531258132.png
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_installer", "_installer", "{B4BD8072-2C25-42A4-A30A-00FD5EAD5356}"
+	ProjectSection(SolutionItems) = preProject
+		installer\mysql-connector-net-8.0.16.msi = installer\mysql-connector-net-8.0.16.msi
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D254644-7E5D-4237-A5CA-3EC8223DF7F8}
+	EndGlobalSection
+EndGlobal
