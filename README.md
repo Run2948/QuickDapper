@@ -22,6 +22,10 @@
 
 #### 6、官方 [EF6 Code First Migrations for Multiple Models](https://msdn.microsoft.com/en-us/magazine/dn948104.aspx)
 
+#### 7、[DapperExtensions的基本用法](https://www.cnblogs.com/fengziaichou/p/5437860.html)
+
+#### 8、[T4模板简单了解](https://www.e-learn.cn/content/net/774208)
+
 # Code First 多上下文操作
 > 默认情况下：
 * `Enable-Migrations`

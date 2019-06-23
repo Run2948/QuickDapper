@@ -1,0 +1,64 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ include file="MultipleOutputHelper.ttinclude" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ output extension="/" #>
+<#
+	// 解决方案文件夹 
+	var solutionsPath = Host.ResolveAssemblyReference("$(SolutionDir)");
+	// 当前项目文件夹
+	var projectPath = Host.ResolveAssemblyReference("$(ProjectDir)");
+	// 实体类所在的文件夹
+	var entityPath = Path.Combine(solutionsPath,"Quick.Models","Entity","Table");
+	// 实体类名称集合
+	var files = Directory.GetFiles(entityPath, "*.cs").Select(Path.GetFileNameWithoutExtension);
+	//创建多文件生成实体
+	var manager = Manager.Create(Host, GenerationEnvironment);  
+#>
+<# 
+	//遍历所有文件
+	foreach(string file in files) { 
+
+	// 设置输出的文件名
+	manager.StartNewFile("I"+file+"Repository.cs");
+#>
+/* ==============================================================================
+* 命名空间：Quick.IRepository
+* 类 名 称：I<#=file#>Repository
+* 创 建 者：Qing
+* 创建时间：<#=DateTime.Now.ToString() #>
+* CLR 版本：4.0.30319.42000
+* 保存的文件名：I<#=file#>Repository
+*
+* 修改历史：
+*
+*
+* 文件版本：V1.0.0.0
+*
+* 功能描述：N/A 
+* ==============================================================================
+*         CopyRight @ 班纳工作室 2019. All rights reserved
+* ==============================================================================*/
+
+using Quick.Models.Entity.Table;
+
+namespace Quick.IRepository
+{
+	public partial interface I<#=file#>Repository :IBaseRepository<<#=file#>> 
+	{ 
+
+	}
+}
+
+<# 
+	 // 输出文件结束
+	 manager.EndBlock();
+
+	} // end foreach 
+
+	// 执行编译，生成文件
+	manager.Process(true);  
+#>       

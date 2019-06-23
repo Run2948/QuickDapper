@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+  </configSections>
+  <connectionStrings>
+    <!--SqlServer：  -->
+    <!--<add name="DataContext" connectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=DbDescription;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" providerName="System.Data.SqlClient"/>-->
+    <add name="DataContext" connectionString="Data Source=211.85.182.111;Initial Catalog=DbDescription;User Id=sa;Password=LBKlbk7474740;Connect Timeout=30;" providerName="System.Data.SqlClient" />
+    <!--Mysql：MultipleActiveResultSets，App=EntityFramework不支持-->
+    <add name="MySqlDataContext" connectionString="Data Source=211.85.182.111;Initial Catalog=DbDescription;User Id=root;Password=;Charset=utf8;Integrated Security=True;" providerName="MySql.Data.MySqlClient" />
+  </connectionStrings>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7.2" />
+  </startup>
+<!--SqlServer 的entityFramework节点配置：  -->
+  <entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.LocalDbConnectionFactory, EntityFramework">
+      <parameters>
+        <parameter value="mssqllocaldb" />
+      </parameters>
+    </defaultConnectionFactory>
+    <providers>
+      <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer" />
+      <provider invariantName="MySql.Data.MySqlClient" type="MySql.Data.MySqlClient.MySqlProviderServices, MySql.Data.Entity.EF6"/>
+    </providers>
+  </entityFramework>
+<!-- MySql 的entityFramework节点配置：codeConfigurationType 配置可以到 MySqlDataContext 上以标签属性配置
+  <entityFramework codeConfigurationType="MySql.Data.Entity.MySqlEFConfiguration, MySql.Data.Entity.EF6">
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.SqlConnectionFactory, EntityFramework" />
+    <providers>
+      <provider invariantName="MySql.Data.MySqlClient" type="MySql.Data.MySqlClient.MySqlProviderServices, MySql.Data.Entity.EF6"/>
+    </providers>
+  </entityFramework>
+-->
+<system.data>
+    <DbProviderFactories>
+      <remove invariant="MySql.Data.MySqlClient" />
+      <add name="MySQL Data Provider" invariant="MySql.Data.MySqlClient" description=".Net Framework Data Provider for MySQL" type="MySql.Data.MySqlClient.MySqlClientFactory, MySql.Data" />
+    </DbProviderFactories>
+  </system.data>
+</configuration>
