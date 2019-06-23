@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quick.IRepository", "Quick.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", "{4919B8BA-2114-4935-8AD3-77FF0F7145E6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{B3809043-1B95-4862-A39D-7763E2276A24}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{B3809043-1B95-4862-A39D-7763E2276A24}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quick.Repository", "Quick.Repository\Quick.Repository.csproj", "{8C515E30-DA70-4CB8-9A7A-87B556AC9644}"
 EndProject

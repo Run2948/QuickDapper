@@ -12,6 +12,8 @@ namespace QuickWeb
         {
             DatabaseConfig.Configure();
             AutoFacConfig.Configure();
+            AutoMapperConfig.Configure();
+            BinderConfig.Configure();
         }
     }
 }

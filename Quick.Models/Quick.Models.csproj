@@ -66,6 +66,7 @@
     <Compile Include="Entity\GenerateId.cs" />
     <Compile Include="Entity\Table\Product.cs" />
     <Compile Include="Entity\Table\Student.cs" />
+    <Compile Include="Entity\Table\UserInfo.cs" />
     <Compile Include="MySqlMigrations\Configuration.cs" />
     <Compile Include="MySql\MySqlDataContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

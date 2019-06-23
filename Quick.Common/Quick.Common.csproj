@@ -34,6 +34,9 @@
     <Reference Include="AngleSharp, Version=0.9.9.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
       <HintPath>..\packages\AngleSharp.0.9.11\lib\net45\AngleSharp.dll</HintPath>
     </Reference>
+    <Reference Include="AutoMapper, Version=8.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.8.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="EPPlus, Version=4.5.3.2, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
       <HintPath>..\packages\EPPlus.4.5.3.2\lib\net40\EPPlus.dll</HintPath>
     </Reference>
@@ -45,6 +48,12 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NReco.ImageGenerator, Version=1.1.3.0, Culture=neutral, PublicKeyToken=0ef6c878974c90ac, processorArchitecture=MSIL">
+      <HintPath>..\packages\NReco.ImageGenerator.1.1.3\lib\net45\NReco.ImageGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="NReco.PdfGenerator, Version=1.1.15.0, Culture=neutral, PublicKeyToken=231663d50a41b451, processorArchitecture=MSIL">
+      <HintPath>..\packages\NReco.PdfGenerator.1.1.15\lib\net20\NReco.PdfGenerator.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="StackExchange.Redis, Version=1.2.6.0, Culture=neutral, processorArchitecture=MSIL">
@@ -69,13 +78,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Html\HtmlToImage.cs" />
+    <Compile Include="Html\HtmlToPdf.cs" />
+    <Compile Include="Mapper\AutoMapperExtension.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Html\HtmlTools.cs" />
     <Compile Include="Linq\LinqExtension.cs" />
     <Compile Include="Logging\LogInfo.cs" />
     <Compile Include="Logging\LogLevel.cs" />
     <Compile Include="Logging\LogManager.cs" />
-    <Compile Include="Models\JsonNetResult.cs" />
     <Compile Include="Models\PageRequest.cs" />
     <Compile Include="Models\ResultInfo.cs" />
     <Compile Include="Mvc\ActionResults\ResumeActionResultBase.cs" />
@@ -84,6 +95,8 @@
     <Compile Include="Mvc\ActionResults\ResumeFileResult.cs" />
     <Compile Include="Mvc\ActionResults\ResumeFileStreamResult.cs" />
     <Compile Include="Mvc\ActionResults\ResumeRequest.cs" />
+    <Compile Include="Mvc\Attributes\JsonNetFilterAttribute.cs" />
+    <Compile Include="Mvc\Attributes\TrimToDbcModelBinder.cs" />
     <Compile Include="Mvc\ControllerExtension.cs" />
     <Compile Include="Mvc\Controllers\BaseController.cs" />
     <Compile Include="Mvc\Csv\CsvColumnAttribute.cs" />
@@ -107,12 +120,20 @@
     <Compile Include="Net\WebExtension.cs" />
     <Compile Include="NoSQL\RedisHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuickKeys.cs" />
+    <Compile Include="Strings\EnumHelper.cs" />
     <Compile Include="Strings\NumberFormater.cs" />
     <Compile Include="Systems\Disposable.cs" />
     <Compile Include="Systems\Windows.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Quick.Models\Quick.Models.csproj">
+      <Project>{A2152A70-5ECA-4734-972C-62ED9B3845AC}</Project>
+      <Name>Quick.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

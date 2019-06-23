@@ -16,12 +16,9 @@
 *         CopyRight @ 班纳工作室 2019. All rights reserved
 * ==============================================================================*/
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using AutoMapper;
+using Quick.Common.Mapper;
+using Quick.Models.Entity.Table;
 
 namespace QuickWeb.ViewModels.AutoMapper
 {
@@ -31,7 +28,8 @@ namespace QuickWeb.ViewModels.AutoMapper
 
         public ViewModelMappingProfile()
         {
-            // CreateMap<User, UserViewModel>().IgnoreAllNonExisting();
+             CreateMap<Student, StudentViewModel>().IgnoreAllNonExisting();
+             CreateMap<UserInfo, UserInfoOutputDto>().IgnoreAllNonExisting();
         }
     }
 }

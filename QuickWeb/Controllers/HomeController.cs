@@ -1,23 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using Quick.IRepository;
+﻿using Quick.Common.Mapper;
+using Quick.Common.Mvc.Controllers;
 using Quick.IServices;
+using QuickWeb.ViewModels;
+using System.Web.Mvc;
 
 namespace QuickWeb.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
-        public IStudentService DogRepository { get; set; }
+        public IStudentService StudentService { get; set; }
 
         // GET: Home
         public ActionResult Index()
         {
-            var name = DogRepository.Get<string>(1, "Name");
-            return Json(new { id = 1, name }, JsonRequestBehavior.AllowGet);
-            //            return Content("ok");
+            //var name = StudentService.Get<string>(1, "Name");
+            //return Ok(new { id = 1, name });
+            var student = StudentService.GetById(1).Mapper<StudentViewModel>();
+            return Ok(student);
         }
     }
 }

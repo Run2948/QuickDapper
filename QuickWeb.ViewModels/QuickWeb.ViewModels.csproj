@@ -46,9 +46,21 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AutoMapper\ViewModelMappingProfile.cs" />
+    <Compile Include="StudentViewModel.cs" />
+    <Compile Include="SessionModel\UserInfoViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Quick.Common\Quick.Common.csproj">
+      <Project>{9C5686F1-2C33-469D-BAA6-070B3707FFD3}</Project>
+      <Name>Quick.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Quick.Models\Quick.Models.csproj">
+      <Project>{a2152a70-5eca-4734-972c-62ed9b3845ac}</Project>
+      <Name>Quick.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
