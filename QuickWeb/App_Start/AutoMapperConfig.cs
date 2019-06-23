@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using AutoMapper;
+﻿using AutoMapper;
 using AutoMapper.Configuration;
 using Quick.Repository.AutoMapper;
 using Quick.Services.AutoMapper;
-using QuickWeb.ViewModels;
+using QuickWeb.ViewModels.AutoMapper;
 
 namespace QuickWeb
 {

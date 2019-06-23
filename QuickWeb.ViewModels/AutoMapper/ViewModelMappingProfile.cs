@@ -1,5 +1,5 @@
 ﻿/* ==============================================================================
-* 命名空间：QuickWeb.ViewModels 
+* 命名空间：QuickWeb.ViewModels.AutoMapper
 * 类 名 称：ViewModelMappingProfile
 * 创 建 者：Qing
 * 创建时间：2019/06/23 17:32:11
@@ -23,7 +23,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 
-namespace QuickWeb.ViewModels
+namespace QuickWeb.ViewModels.AutoMapper
 {
     public class ViewModelMappingProfile : Profile
     {
