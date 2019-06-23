@@ -6,12 +6,13 @@ using System.Web;
 using System.Web.Mvc;
 using Autofac;
 using Autofac.Integration.Mvc;
+using Quick.Common.NoSQL;
 
 namespace QuickWeb
 {
     public class AutoFacConfig
     {
-        public static void RegisterAllApps()
+        public static void Configure()
         {
             var builder = new ContainerBuilder();
 
@@ -31,8 +32,10 @@ namespace QuickWeb
                 .PropertiesAutowired(PropertyWiringOptions.PreserveSetValues); // 开启属性注入方式 
 
             builder.RegisterControllers(Assembly.GetExecutingAssembly())   // 注入所有Controller
-                .Where(t => t.Name.EndsWith("Controller"))
                 .PropertiesAutowired(PropertyWiringOptions.PreserveSetValues); // 开启属性注入方式  
+
+            // 其他
+            //builder.RegisterType<RedisHelper>().OnRelease(db => db.Dispose()).InstancePerLifetimeScope();
 
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

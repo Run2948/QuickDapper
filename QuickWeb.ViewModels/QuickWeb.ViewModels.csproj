@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2E379E40-B719-4716-AD1C-6602BFAB67B0}</ProjectGuid>
+    <ProjectGuid>{8002D298-C74F-4F9E-9977-F21DB98531C1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Quick.Services</RootNamespace>
-    <AssemblyName>Quick.Services</AssemblyName>
+    <RootNamespace>QuickWeb.ViewModels</RootNamespace>
+    <AssemblyName>QuickWeb.ViewModels</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -34,12 +34,6 @@
     <Reference Include="AutoMapper, Version=8.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <HintPath>..\packages\AutoMapper.8.1.1\lib\net461\AutoMapper.dll</HintPath>
     </Reference>
-    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
-    </Reference>
-    <Reference Include="DapperExtensions, Version=1.6.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DapperExtensions.1.6.3\lib\net45\DapperExtensions.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,48 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutoMapper\ServiceMappingProfile.cs" />
-    <Compile Include="BaseService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="T4\ProductService.cs">
-      <DependentUpon>Services.tt</DependentUpon>
-    </Compile>
-    <Compile Include="T4\StudentService.cs">
-      <DependentUpon>Services.tt</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Quick.IRepository\Quick.IRepository.csproj">
-      <Project>{1f4c1512-1cdf-4706-a928-704562147820}</Project>
-      <Name>Quick.IRepository</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Quick.IServices\Quick.IServices.csproj">
-      <Project>{459821bc-c714-419a-a9e2-f566dc391dfb}</Project>
-      <Name>Quick.IServices</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Quick.Models\Quick.Models.csproj">
-      <Project>{a2152a70-5eca-4734-972c-62ed9b3845ac}</Project>
-      <Name>Quick.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Quick.Repository\Quick.Repository.csproj">
-      <Project>{8c515e30-da70-4cb8-9a7a-87b556ac9644}</Project>
-      <Name>Quick.Repository</Name>
-    </ProjectReference>
+    <Compile Include="ViewModelMappingProfile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="T4\MultipleOutputHelper.ttinclude" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="T4\Services.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

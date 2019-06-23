@@ -49,6 +49,9 @@
     <Reference Include="Autofac.Integration.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.Mvc5.4.0.2\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="AutoMapper, Version=8.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.8.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -112,12 +115,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AutoFacConfig.cs" />
+    <Compile Include="App_Start\AutoMapperConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\StartupConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -140,6 +146,10 @@
     <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Quick.Common\Quick.Common.csproj">
+      <Project>{9C5686F1-2C33-469D-BAA6-070B3707FFD3}</Project>
+      <Name>Quick.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Quick.IRepository\Quick.IRepository.csproj">
       <Project>{1f4c1512-1cdf-4706-a928-704562147820}</Project>
       <Name>Quick.IRepository</Name>
@@ -151,6 +161,18 @@
     <ProjectReference Include="..\Quick.Models\Quick.Models.csproj">
       <Project>{a2152a70-5eca-4734-972c-62ed9b3845ac}</Project>
       <Name>Quick.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Quick.Repository\Quick.Repository.csproj">
+      <Project>{8c515e30-da70-4cb8-9a7a-87b556ac9644}</Project>
+      <Name>Quick.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Quick.Services\Quick.Services.csproj">
+      <Project>{2e379e40-b719-4716-ad1c-6602bfab67b0}</Project>
+      <Name>Quick.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuickWeb.ViewModels\QuickWeb.ViewModels.csproj">
+      <Project>{8002d298-c74f-4f9e-9977-f21db98531c1}</Project>
+      <Name>QuickWeb.ViewModels</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

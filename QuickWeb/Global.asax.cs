@@ -1,12 +1,7 @@
-using Autofac;
-using Autofac.Integration.Mvc;
 using System;
-using System.Linq;
-using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-using Quick.Models;
 
 namespace QuickWeb
 {
@@ -16,8 +11,7 @@ namespace QuickWeb
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            DatabaseConfig.Initialize();
-            AutoFacConfig.RegisterAllApps();
+            StartupConfig.RegisterAllConfigures();
         }
 
         protected void Application_Error(object sender, EventArgs e)

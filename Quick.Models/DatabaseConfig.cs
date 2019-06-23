@@ -33,7 +33,7 @@ namespace Quick.Models
         public static bool IsMySql => "mysql" == DatabaseType.ToLower();
         public static bool IsSqlServer => "mssql" == DatabaseType.ToLower();
 
-        public static void Initialize()
+        public static void Configure()
         {
             if (IsMySql)
             {
