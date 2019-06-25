@@ -55,6 +55,9 @@
     <Compile Include="T4\IStudentService.cs">
       <DependentUpon>IServices.tt</DependentUpon>
     </Compile>
+    <Compile Include="T4\IUserInfoService.cs">
+      <DependentUpon>IServices.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

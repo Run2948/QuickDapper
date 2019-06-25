@@ -55,6 +55,9 @@
     <Compile Include="T4\IStudentRepository.cs">
       <DependentUpon>IRepository.tt</DependentUpon>
     </Compile>
+    <Compile Include="T4\IUserInfoRepository.cs">
+      <DependentUpon>IRepository.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Quick.Models\Quick.Models.csproj">

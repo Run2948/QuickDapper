@@ -16,18 +16,14 @@
 *         CopyRight @ 班纳工作室 2019. All rights reserved
 * ==============================================================================*/
 
-using System;
-using System.Collections.Generic;
+using System.Data.Common;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Quick.Models
 {
     // * 报错：执行Update-Database提示Specified key was too long; max key length is 767 bytes
-    [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]  
+    [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
     public partial class MySqlDataContext : DbContext
     {
         /// <summary>
@@ -38,7 +34,15 @@ namespace Quick.Models
             : base("name=MySqlDataContext")
         {
             Database.CreateIfNotExists();
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<MySqlDataContext, Quick.MySqlMigrations.MySqlConfig>());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<MySqlDataContext, Quick.Models.MySqlMigrations.MySqlConfig>());
+        }
+
+        public MySqlDataContext(DbConnection existConnection, bool contextOwnsConnection)
+            : base(existConnection, contextOwnsConnection)
+        {
+            Configuration.ProxyCreationEnabled = true;
+            Configuration.LazyLoadingEnabled = false;
+            Configuration.AutoDetectChangesEnabled = true;
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

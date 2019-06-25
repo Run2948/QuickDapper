@@ -105,7 +105,7 @@ namespace Quick.Models
             else
                 desc = "select [value] from fn_listextendedproperty('MS_Description','schema','dbo','table',N'" + tableName + "','column',null) where objname = N'" + columnName + "';";
 
-            var prevDesc = (string)RunSqlScalar(desc);
+            var prevDesc = (string)ExecuteSqlScalar(desc);
 
             var parameters = new List<SqlParameter>
             {
@@ -126,7 +126,7 @@ namespace Quick.Models
                 parameters.Add(new SqlParameter("@column", columnName));
             }
 
-            RunSql(query, parameters.ToArray());
+            ExecuteSql(query, parameters.ToArray());
         }
 
         DbCommand CreateCommand(string cmdText, params SqlParameter[] parameters)
@@ -141,12 +141,12 @@ namespace Quick.Models
             return cmd;
         }
 
-        void RunSql(string cmdText, params SqlParameter[] parameters)
+        void ExecuteSql(string cmdText, params SqlParameter[] parameters)
         {
             var cmd = CreateCommand(cmdText, parameters);
             cmd.ExecuteNonQuery();
         }
-        object RunSqlScalar(string cmdText, params SqlParameter[] parameters)
+        object ExecuteSqlScalar(string cmdText, params SqlParameter[] parameters)
         {
             var cmd = CreateCommand(cmdText, parameters);
             return cmd.ExecuteScalar();

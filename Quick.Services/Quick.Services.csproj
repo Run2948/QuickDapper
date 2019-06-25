@@ -59,6 +59,9 @@
     <Compile Include="T4\StudentService.cs">
       <DependentUpon>Services.tt</DependentUpon>
     </Compile>
+    <Compile Include="T4\UserInfoService.cs">
+      <DependentUpon>Services.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Quick.IRepository\Quick.IRepository.csproj">

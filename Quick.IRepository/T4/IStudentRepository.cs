@@ -2,7 +2,7 @@
 * 命名空间：Quick.IRepository
 * 类 名 称：IStudentRepository
 * 创 建 者：Qing
-* 创建时间：2019/06/23 15:48:12
+* 创建时间：2019/06/25 14:36:01
 * CLR 版本：4.0.30319.42000
 * 保存的文件名：IStudentRepository
 *

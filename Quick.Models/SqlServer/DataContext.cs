@@ -16,15 +16,8 @@
 *         CopyRight @ 班纳工作室 2019. All rights reserved
 * ==============================================================================*/
 
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Quick.Models.Entity;
-
 namespace Quick.Models
 {
     public partial class DataContext : DbContext
@@ -37,7 +30,7 @@ namespace Quick.Models
             : base("name=DataContext")
         {
             Database.CreateIfNotExists();
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<MySqlDataContext, Quick.MySqlMigrations.MySqlConfig>());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<MySqlDataContext, Quick.Models.MySqlMigrations.MySqlConfig>());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

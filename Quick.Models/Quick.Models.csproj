@@ -69,13 +69,14 @@
     <Compile Include="Entity\Table\UserInfo.cs" />
     <Compile Include="MySqlMigrations\Configuration.cs" />
     <Compile Include="MySql\MySqlDataContext.cs" />
+    <Compile Include="MySql\MySqlDBDescriptionUpdater.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerMigrations\Configuration.cs" />
-    <Compile Include="SqlServer\ContextExtensions.cs" />
+    <Compile Include="DbDescription\ContextExtensions.cs" />
     <Compile Include="SqlServer\DataContext.cs" />
-    <Compile Include="SqlServer\DBDescriptionAttribute.cs" />
+    <Compile Include="DbDescription\DBDescriptionAttribute.cs" />
     <Compile Include="SqlServer\DBDescriptionUpdater.cs" />
-    <Compile Include="SqlServer\TypeExtensions.cs" />
+    <Compile Include="DbDescription\TypeExtensions.cs" />
     <Compile Include="T4\DataContext.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -101,7 +102,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App.txt" />
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

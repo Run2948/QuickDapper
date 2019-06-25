@@ -24,7 +24,7 @@ using System.Threading.Tasks;
 
 namespace Quick.Models.Entity.Table
 {
-    //[DbDescription("产品表")]
+    [DbDescription("产品表")]
     public class Product : GenerateId<long>
     {
         public string Name { get; set; }

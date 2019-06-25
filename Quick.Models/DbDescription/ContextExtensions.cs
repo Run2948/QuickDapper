@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Collections.Specialized;
+using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Core.Objects;
 using System.Data.Entity.Infrastructure;
+using System.Data.SqlClient;
 using System.Reflection;
 using System.Text.RegularExpressions;
+using MySql.Data.MySqlClient;
 
 namespace Quick.Models
 {
@@ -29,6 +33,11 @@ namespace Quick.Models
             Match match = regex.Match(sql);
             string table = match.Groups["table"].Value;
             return table;
+        }
+
+        public static string GetDatabaseName(this DbContext context)
+        {
+            return context.Database.Connection.Database;
         }
     }
 }

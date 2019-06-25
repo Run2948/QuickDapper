@@ -1,11 +1,6 @@
-using Quick.Models;
-
-namespace Quick.SqlServerMigrations
+namespace Quick.Models.SqlServerMigrations
 {
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
 
     internal sealed class SqlServerConfig : DbMigrationsConfiguration<Quick.Models.DataContext>
     {

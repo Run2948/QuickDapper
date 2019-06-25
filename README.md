@@ -27,15 +27,21 @@
 #### 8、[T4模板简单了解](https://www.e-learn.cn/content/net/774208)
 
 # Code First 多上下文操作
+
 > 默认情况下：
 * `Enable-Migrations`
 * `Update-Database`
+
 > SqlServer 和 MySql 两个上下文配置：
-* `Enable-Migrations -ContextTypeName DBDescriptionUpdater.Models.DataContext -MigrationsDirectory SqlServerMigrations`
-* `Enable-Migrations -ContextTypeName DBDescriptionUpdater.Models.MySqlDataContext -MigrationsDirectory MySqlMigrations`
+* `Enable-Migrations -ContextTypeName Quick.Models.DataContext -MigrationsDirectory SqlServerMigrations`
+* `Enable-Migrations -ContextTypeName Quick.Models.MySqlDataContext -MigrationsDirectory MySqlMigrations`
 * 为了便于区分两个上下文的配置，可将两个`Configuration`类名称分别改为`SqlServerConfig`和`MySqlConfig`
 * 其次还要注意 entityFramework 节点中 `provider` 的配置
 * `Add-Migration Initial -ConfigurationTypeName SqlServerConfig`
 * `Add-Migration Initial -ConfigurationTypeName MySqlConfig`
 * `Update-Database -ConfigurationTypeName SqlServerConfig`
 * `Update-Database -ConfigurationTypeName MySqlConfig` 
+
+> SqlServer 和 MySql 两个上下文配置，并开启自动迁移：
+* `Update-Database -ConfigurationTypeName SqlServerConfig -Force`
+* `Update-Database -ConfigurationTypeName MySqlConfig -Force` 

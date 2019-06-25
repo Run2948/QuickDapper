@@ -1,10 +1,10 @@
 /* ==============================================================================
-* 命名空间：Quick.Services
-* 类 名 称：StudentService
+* 命名空间：Quick.IRepository
+* 类 名 称：UserInfoRepository
 * 创 建 者：Qing
 * 创建时间：2019/06/25 14:36:02
 * CLR 版本：4.0.30319.42000
-* 保存的文件名：StudentService
+* 保存的文件名：UserInfoRepository
 *
 * 修改历史：
 *
@@ -17,14 +17,13 @@
 * ==============================================================================*/
 
 using Quick.IRepository;
-using Quick.IServices;
 using Quick.Models.Entity.Table;
 
-namespace Quick.Services
+namespace Quick.Repository
 {
-	public partial class StudentService :BaseService<Student>,IStudentService
+	public partial class UserInfoRepository :BaseRepository<UserInfo>,IUserInfoRepository
 	{ 
-		public virtual IStudentRepository StudentRepository { get; set; }
+
 	}
 }
 
