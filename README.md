@@ -1,47 +1,47 @@
-# ³£¼ûÎÊÌâ
+# å¸¸è§é—®é¢˜
 
-#### 1¡¢[EF Code FirstÏÂÖ§³ÖÔÚSQL ServerÖĞµÄ±í/×Ö¶ÎµÄËµÃ÷](https://www.cnblogs.com/tanglang/p/4798211.html)
-> Á½¸ö·½·¨¹ı³ÌÈçÍ¼ËùÊ¾£º
+#### 1ã€[EF Code Firstä¸‹æ”¯æŒåœ¨SQL Serverä¸­çš„è¡¨/å­—æ®µçš„è¯´æ˜](https://www.cnblogs.com/tanglang/p/4798211.html)
+> ä¸¤ä¸ªæ–¹æ³•è¿‡ç¨‹å¦‚å›¾æ‰€ç¤ºï¼š
 ![](./docs/1319833657.png)
 
-#### 2¡¢[Ê¹ÓÃT4Ä£°å±¨´í£º¡°ÕıÔÚ±àÒë×ª»»£»µ±Ç°ÉÏÏÂÎÄÖĞ²»´æÔÚÃû³ÆHost¡±](https://www.cnblogs.com/xiaoxiangfeizi/p/3572295.html)
+#### 2ã€[ä½¿ç”¨T4æ¨¡æ¿æŠ¥é”™ï¼šâ€œæ­£åœ¨ç¼–è¯‘è½¬æ¢ï¼›å½“å‰ä¸Šä¸‹æ–‡ä¸­ä¸å­˜åœ¨åç§°Hostâ€](https://www.cnblogs.com/xiaoxiangfeizi/p/3572295.html)
 ![](./docs/272022528694589.png)
-> ½â¾ö·½·¨£º½«Í¼ÖĞµÄFalse¸Ä³ÉTrue¾ÍºÃÁË£º
+> è§£å†³æ–¹æ³•ï¼šå°†å›¾ä¸­çš„Falseæ”¹æˆTrueå°±å¥½äº†ï¼š
 ![](./docs/272022531258132.png)
 
-#### 3¡¢[MySQL :: Download Connector/NET ](https://dev.mysql.com/downloads/connector/net/)
-> °²×°MySQL For Visual StudioºÍConnector/NET£º
+#### 3ã€[MySQL :: Download Connector/NET ](https://dev.mysql.com/downloads/connector/net/)
+> å®‰è£…MySQL For Visual Studioå’ŒConnector/NETï¼š
 ![](./docs/20190619211838.png)
 
-#### 4¡¢[ No MigrationSqlGenerator found for provider 'MySql.Data.MySqlClient'](https://www.cnblogs.com/likeli/p/5775719.html)
-> ½â¾ö·½°¸£º
-ĞèÒªÔÚContextÖ¸¶¨MysqlµÄÅäÖÃÎÄ¼ş¡£
+#### 4ã€[ No MigrationSqlGenerator found for provider 'MySql.Data.MySqlClient'](https://www.cnblogs.com/likeli/p/5775719.html)
+> è§£å†³æ–¹æ¡ˆï¼š
+éœ€è¦åœ¨ContextæŒ‡å®šMysqlçš„é…ç½®æ–‡ä»¶ã€‚
 [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
 
-#### 5¡¢[Ê¹ÓÃWEBAPIÁ¬½Óµ½MYSQLÅäÖÃÁ÷³Ì](https://blog.csdn.net/csdn102347501/article/details/79398863)
+#### 5ã€[ä½¿ç”¨WEBAPIè¿æ¥åˆ°MYSQLé…ç½®æµç¨‹](https://blog.csdn.net/csdn102347501/article/details/79398863)
 
-#### 6¡¢¹Ù·½ [EF6 Code First Migrations for Multiple Models](https://msdn.microsoft.com/en-us/magazine/dn948104.aspx)
+#### 6ã€å®˜æ–¹ [EF6 Code First Migrations for Multiple Models](https://msdn.microsoft.com/en-us/magazine/dn948104.aspx)
 
-#### 7¡¢[DapperExtensionsµÄ»ù±¾ÓÃ·¨](https://www.cnblogs.com/fengziaichou/p/5437860.html)
+#### 7ã€[DapperExtensionsçš„åŸºæœ¬ç”¨æ³•](https://www.cnblogs.com/fengziaichou/p/5437860.html)
 
-#### 8¡¢[T4Ä£°å¼òµ¥ÁË½â](https://www.e-learn.cn/content/net/774208)
+#### 8ã€[T4æ¨¡æ¿ç®€å•äº†è§£](https://www.e-learn.cn/content/net/774208)
 
-# Code First ¶àÉÏÏÂÎÄ²Ù×÷
+# Code First å¤šä¸Šä¸‹æ–‡æ“ä½œ
 
-> Ä¬ÈÏÇé¿öÏÂ£º
+> é»˜è®¤æƒ…å†µä¸‹ï¼š
 * `Enable-Migrations`
 * `Update-Database`
 
-> SqlServer ºÍ MySql Á½¸öÉÏÏÂÎÄÅäÖÃ£º
+> SqlServer å’Œ MySql ä¸¤ä¸ªä¸Šä¸‹æ–‡é…ç½®ï¼š
 * `Enable-Migrations -ContextTypeName Quick.Models.DataContext -MigrationsDirectory SqlServerMigrations`
 * `Enable-Migrations -ContextTypeName Quick.Models.MySqlDataContext -MigrationsDirectory MySqlMigrations`
-* ÎªÁË±ãÓÚÇø·ÖÁ½¸öÉÏÏÂÎÄµÄÅäÖÃ£¬¿É½«Á½¸ö`Configuration`ÀàÃû³Æ·Ö±ğ¸ÄÎª`SqlServerConfig`ºÍ`MySqlConfig`
-* Æä´Î»¹Òª×¢Òâ entityFramework ½ÚµãÖĞ `provider` µÄÅäÖÃ
+* ä¸ºäº†ä¾¿äºåŒºåˆ†ä¸¤ä¸ªä¸Šä¸‹æ–‡çš„é…ç½®ï¼Œå¯å°†ä¸¤ä¸ª`Configuration`ç±»åç§°åˆ†åˆ«æ”¹ä¸º`SqlServerConfig`å’Œ`MySqlConfig`
+* å…¶æ¬¡è¿˜è¦æ³¨æ„ entityFramework èŠ‚ç‚¹ä¸­ `provider` çš„é…ç½®
 * `Add-Migration Initial -ConfigurationTypeName SqlServerConfig`
 * `Add-Migration Initial -ConfigurationTypeName MySqlConfig`
 * `Update-Database -ConfigurationTypeName SqlServerConfig`
 * `Update-Database -ConfigurationTypeName MySqlConfig` 
 
-> SqlServer ºÍ MySql Á½¸öÉÏÏÂÎÄÅäÖÃ£¬²¢¿ªÆô×Ô¶¯Ç¨ÒÆ£º
+> SqlServer å’Œ MySql ä¸¤ä¸ªä¸Šä¸‹æ–‡é…ç½®ï¼Œå¹¶å¼€å¯è‡ªåŠ¨è¿ç§»ï¼š
 * `Update-Database -ConfigurationTypeName SqlServerConfig -Force`
 * `Update-Database -ConfigurationTypeName MySqlConfig -Force` 
