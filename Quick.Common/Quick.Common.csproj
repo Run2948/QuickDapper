@@ -78,6 +78,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Encrypt\DES.cs" />
+    <Compile Include="Encrypt\MD5.cs" />
+    <Compile Include="Encrypt\RSA.cs" />
+    <Compile Include="Encrypt\SHA.cs" />
     <Compile Include="Html\HtmlToImage.cs" />
     <Compile Include="Html\HtmlToPdf.cs" />
     <Compile Include="Mapper\AutoMapperExtension.cs" />
